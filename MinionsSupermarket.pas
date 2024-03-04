@@ -41,12 +41,12 @@ type
 
 var
   MinionsSupermarketForm: TMinionsSupermarketForm;
-  min: integer; //переменная количества миньонов
-  minP: array [0..6] of integer; //переменная приоритетов миньонов
-  minN: array [0..65535] of integer; //переменная количества продуктов миньонов
-  minNT: array [0..65535] of TMyThread; //переменная количества продуктов миньонов
-  prod: integer; //объем корзины
-  minprod: integer; //общее количество продуктов в корзине
+  min: integer;
+  minP: array [0..6] of integer;
+  minN: array [0..65535] of integer;
+  minNT: array [0..65535] of TMyThread;
+  prod: integer;
+  minprod: integer;
   n: array [0..65535] of integer;
   MinNB: array [0..65535] of Boolean;
 
@@ -73,7 +73,6 @@ begin
   if J = numberI then
   begin
   if prod <= minprod then
-
     begin
       sleep (50);
       minN[numberI] :=  prod - minprod;
