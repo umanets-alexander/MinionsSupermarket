@@ -1,6 +1,8 @@
 object MinionsSupermarketForm: TMinionsSupermarketForm
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = #1052#1080#1085#1100#1086#1085#1099' '#1074' '#1089#1091#1087#1077#1088#1084#1072#1088#1082#1077#1090#1077
   ClientHeight = 453
   ClientWidth = 782
@@ -75,6 +77,7 @@ object MinionsSupermarketForm: TMinionsSupermarketForm
       Height = 40
       Caption = 'FAQ'
       TabOrder = 4
+      OnClick = BtnFAQClick
     end
   end
   object Panel2: TPanel

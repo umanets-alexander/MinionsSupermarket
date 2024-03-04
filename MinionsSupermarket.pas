@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, FAQform;
 
 type
   TMinionsSupermarketForm = class(TForm)
@@ -25,6 +25,7 @@ type
     Label5: TLabel;
     procedure BtnStartClick(Sender: TObject);
     procedure BtnStopClick(Sender: TObject);
+    procedure BtnFAQClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -115,6 +116,11 @@ begin
       MinionsSupermarketForm.MemoResult.Lines.Add('Миньон ['+IntToStr(I)+'], '+MinPString(minP[I])+' - '+IntToStr(n[I])+' товаров;');
     end;
     MinionsSupermarketForm.btnStop.Enabled := false;
+end;
+
+procedure TMinionsSupermarketForm.BtnFAQClick(Sender: TObject);
+begin
+  FAQform.FForm.Show();
 end;
 
 procedure TMinionsSupermarketForm.BtnStartClick(Sender: TObject);

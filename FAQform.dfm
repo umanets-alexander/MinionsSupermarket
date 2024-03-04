@@ -1,8 +1,10 @@
 object FForm: TFForm
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'FAQ'
-  ClientHeight = 512
+  ClientHeight = 509
   ClientWidth = 751
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -10,13 +12,12 @@ object FForm: TFForm
   Font.Height = -17
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Visible = True
   TextHeight = 23
   object Memo1: TMemo
     Left = 0
-    Top = 24
+    Top = 8
     Width = 751
-    Height = 449
+    Height = 465
     Lines.Strings = (
       #1055#1088#1086#1077#1082#1090' '#1088#1077#1072#1083#1080#1079#1086#1074#1072#1085' '#1087#1086' '#1090#1077#1089#1090#1086#1074#1086#1084#1091' '#1079#1072#1076#1072#1085#1080#1102
       
@@ -60,7 +61,10 @@ object FForm: TFForm
     Top = 479
     Width = 151
     Height = 27
-    Caption = 'GitHub Link project'
+    Caption = 
+      '<a href="https://github.com/umanets-alexander/MinionsSupermarket' +
+      '/">GitHub Link project</a>'
     TabOrder = 1
+    OnLinkClick = LinkLabel1LinkClick
   end
 end
